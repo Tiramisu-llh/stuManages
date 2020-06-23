@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC378880-C2EF-434F-9EBB-0FAF98549772}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>stuManages</RootNamespace>
+    <AssemblyName>stuManages</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>images\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbUtil.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\User.cs" />
+    <Compile Include="MysqlUtil.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="viewForm\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewForm\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewForm\CourseAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewForm\CourseAdd.Designer.cs">
+      <DependentUpon>CourseAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewForm\CourseManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewForm\CourseManage.Designer.cs">
+      <DependentUpon>CourseManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewForm\EditPsw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewForm\EditPsw.Designer.cs">
+      <DependentUpon>EditPsw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewForm\StudentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewForm\StudentAdd.Designer.cs">
+      <DependentUpon>StudentAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewForm\StuManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewForm\StuManage.Designer.cs">
+      <DependentUpon>StuManage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewForm\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewForm\CourseAdd.resx">
+      <DependentUpon>CourseAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewForm\CourseManage.resx">
+      <DependentUpon>CourseManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewForm\EditPsw.resx">
+      <DependentUpon>EditPsw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewForm\StudentAdd.resx">
+      <DependentUpon>StudentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewForm\StuManage.resx">
+      <DependentUpon>StuManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\userName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\modify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\bg0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\delete %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\search %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\addto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\manage %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\manage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\add-account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\paw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\login %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\psw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\setting %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\个人.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\QQ图片20200402130207.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icon\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\bg2.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
